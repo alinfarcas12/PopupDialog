@@ -1,5 +1,5 @@
 PODS:
-  - DynamicBlurView (4.0.0)
+  - DynamicBlurView (5.0.3)
   - iOSSnapshotTestCase (8.0.0):
     - iOSSnapshotTestCase/SwiftSupport (= 8.0.0)
   - iOSSnapshotTestCase/Core (8.0.0)
@@ -7,10 +7,11 @@ PODS:
     - iOSSnapshotTestCase/Core
   - Nimble (10.0.0)
   - PopupDialog (1.1.1):
-    - DynamicBlurView (~> 4.0)
-  - SwiftLint (0.35.0)
+    - DynamicBlurView (~> 5.0)
+  - SwiftLint (0.51.0)
 
 DEPENDENCIES:
+  - DynamicBlurView (from `https://github.com/bonninf/DynamicBlurView.git`, branch `master`)
   - iOSSnapshotTestCase (~> 8.0.0)
   - Nimble (~> 10)
   - PopupDialog (from `../`)
@@ -18,22 +19,29 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - DynamicBlurView
     - iOSSnapshotTestCase
     - Nimble
     - SwiftLint
 
 EXTERNAL SOURCES:
+  DynamicBlurView:
+    :branch: master
+    :git: https://github.com/bonninf/DynamicBlurView.git
   PopupDialog:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  DynamicBlurView:
+    :commit: 7e146022a0033e5db7c60fa7260d0cb15abda932
+    :git: https://github.com/bonninf/DynamicBlurView.git
+
 SPEC CHECKSUMS:
-  DynamicBlurView: ccf9acd2b20c883cc2c72e3524a04d8d3ee20533
+  DynamicBlurView: 616b059a7701d4e71d50f98d44959f76b31e806c
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
-  PopupDialog: 720c92befd8bc23c13442254945213db5612f149
-  SwiftLint: 5553187048b900c91aa03552807681bb6b027846
+  PopupDialog: 11d83c0eab63bc0c55f182f4199d5ed2797b332e
+  SwiftLint: 1b7561918a19e23bfed960e40759086e70f4dba5
 
-PODFILE CHECKSUM: 019ec30c97981e2a71f10283b85a94b306fdb732
+PODFILE CHECKSUM: 2485a9df7175c9aa06bc71a3c0e37afb869e0a89
 
 COCOAPODS: 1.11.3
