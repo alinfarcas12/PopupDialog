@@ -28,7 +28,11 @@
 //  OTHER DEALINGS IN THE SOFTWARE.
 //
 
+#if SWIFT_PACKAGE
+#import "UIImage+Compare.h"
+#else
 #import <FBSnapshotTestCase/UIImage+Compare.h>
+#endif
 
 // This makes debugging much more fun
 typedef union {
@@ -46,10 +50,9 @@ typedef union {
 
 - (BOOL)fb_compareWithImage:(UIImage *)image perPixelTolerance:(CGFloat)perPixelTolerance overallTolerance:(CGFloat)overallTolerance
 {
-    NSAssert(CGSizeEqualToSize(self.size, image.size), @"Images must be same size.");
-
     CGSize referenceImageSize = CGSizeMake(CGImageGetWidth(self.CGImage), CGImageGetHeight(self.CGImage));
     CGSize imageSize = CGSizeMake(CGImageGetWidth(image.CGImage), CGImageGetHeight(image.CGImage));
+    NSAssert(CGSizeEqualToSize(referenceImageSize, imageSize), @"Images must be same size.");
 
     // The images have the equal size, so we could use the smallest amount of bytes because of byte padding
     size_t minBytesPerRow = MIN(CGImageGetBytesPerRow(self.CGImage), CGImageGetBytesPerRow(image.CGImage));
