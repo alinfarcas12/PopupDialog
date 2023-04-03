@@ -7,7 +7,7 @@ target 'PopupDialog_Example' do
 
   pod 'PopupDialog', :path => '../'
   pod 'SwiftLint', '~> 0.35'
-  pod 'DynamicBlurView', :git => 'https://github.com/bonninf/DynamicBlurView.git', :branch => 'master'
+  pod 'DynamicBlurView', :git => 'https://github.com/alinfarcas12/DynamicBlurView.git', :branch => 'master'
   
   target 'PopupDialog_Tests' do
     inherit! :search_paths
